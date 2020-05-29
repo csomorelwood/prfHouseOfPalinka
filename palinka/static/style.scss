@@ -1,0 +1,70 @@
+$bglight: #fbc7409e;
+$bg: #ffca4166;
+$secondarytxt: #db3d12;
+$primarytxt: #800000;
+div{
+  box-sizing: border-box;
+}
+body{
+  background-color: $bglight;
+  margin: 0;
+  font-family: sans-serif;
+  color: $primarytxt;
+  nav{
+    .navbar{
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          list-style-type: none;
+          margin: 0 10px;
+          a{
+            font-family: sans-serif;
+            text-decoration: none;
+            font-weight: 600;
+            color: $secondarytxt;
+          }
+        }
+      }
+    }
+  }
+  section{
+    .container{
+      width: 80%;
+      margin: auto;
+      .title{
+        text-align: center;
+        font-style: italic;
+        font-weight: 700;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      .form-group{
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        input,select{
+          border: 1px solid $secondarytxt;
+          background-color: $bg;
+          padding: 10px;
+        }
+      }
+      button{
+        background-color: $bg;
+        border: 1px solid $secondarytxt;
+        padding: 10px 50px;
+      }
+      .row{
+        .col{
+          padding: 10px 0;
+          &:nth-child(odd){
+            background-color: $bg;
+          }
+        }
+      }
+      span{
+        padding: 5px 0;
+      }
+    }
+  }
+}

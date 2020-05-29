@@ -3,16 +3,28 @@
     <div class="navbar">
       <ul>
         <li>
-          <router-link class="nav-link" to="/">Home</router-link>
+          <router-link class="nav-link" to="/">Pálinka háza</router-link>
         </li>
         <li v-if="auth==''">
-          <router-link class="nav-link" to="/login">Login</router-link>
+          <router-link class="nav-link" to="/login">Bejelentkezés</router-link>
         </li>
         <li v-if="auth==''">
-          <router-link class="nav-link" to="/register">Register</router-link>
+          <router-link class="nav-link" to="/register">Regisztráció</router-link>
+        </li>
+        <li>
+          <router-link class="nav-link" to="/tips">Tippek a főzéshez</router-link>
         </li>
         <li v-if="auth=='loggedin'">
-          <a class="nav-link" href="" v-on:click="logout">Logout</a>
+          <router-link class="nav-link" to="/listusers">Felhasználóink</router-link>
+        </li>
+        <li v-if="auth=='loggedin'">
+          <router-link class="nav-link" to="/listpalinka">Pálinkáink</router-link>
+        </li>
+        <li v-if="auth=='loggedin'">
+          <router-link class="nav-link" to="/palinkafozes">Pálinka főzés</router-link>
+        </li>
+        <li v-if="auth=='loggedin'">
+          <a class="nav-link" href="" v-on:click="logout">Kijelentkezés</a>
         </li>
       </ul>
     </div>
@@ -36,6 +48,7 @@ export default {
   methods: {
     logout () {
       localStorage.removeItem('usertoken')
+      localStorage.removeItem('userid')
     }
   },
 

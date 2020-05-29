@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <form v-on:submit.prevent="register">
-        <h1>Regisztrálj most</h1>
+        <h1 class="title">Regisztrálj most</h1>
         <div class="form-group">
           <label for="username">Felhasználónév</label>
           <input type="text" v-model="username" name="username" placeholder="Östván atya">
@@ -24,17 +24,20 @@ import router from '../router'
 export default {
   data () {
     return {
-      usernae: '',
+      username: '',
       password: ''
     }
   },
   methods: {
     register () {
-      axios.post('register', {
-        email: this.email,
-        password: this.password
+      axios.post('/register', {
+        username: this.username,
+        password: this.password,
+        role: 'user'
       }).then(res => {
-        router.push({name: 'Login'})
+        if (res.status === 201) {
+          router.push('/login')
+        }
       }).catch(err => {
         console.log(err)
       })

@@ -1,0 +1,61 @@
+div {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbc7409e;
+  margin: 0;
+  font-family: sans-serif;
+  color: #800000;
+}
+body nav .navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+body nav .navbar ul li {
+  list-style-type: none;
+  margin: 0 10px;
+}
+body nav .navbar ul li a {
+  font-family: sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  color: #db3d12;
+}
+body section .container {
+  width: 80%;
+  margin: auto;
+}
+body section .container .title {
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+body section .container .form-group {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+body section .container .form-group input, body section .container .form-group select {
+  border: 1px solid #db3d12;
+  background-color: #ffca4166;
+  padding: 10px;
+}
+body section .container button {
+  background-color: #ffca4166;
+  border: 1px solid #db3d12;
+  padding: 10px 50px;
+}
+body section .container .row .col {
+  padding: 10px 0;
+}
+body section .container .row .col:nth-child(odd) {
+  background-color: #ffca4166;
+}
+body section .container span {
+  padding: 5px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
